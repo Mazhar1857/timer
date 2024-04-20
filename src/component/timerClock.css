@@ -1,0 +1,65 @@
+.timer-clock-component>:first-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: var(--padding);
+
+    >:first-child {
+        width: 48px;
+        height: 16px;
+        background-color: black;
+        border-radius: 100vmax;
+
+    }
+
+    >:last-child {
+        width: 16px;
+        height: var(--height);
+        background-color: black;
+    }
+
+
+}
+
+
+.timer-clock-component>:last-child {
+    width: 300px;
+    aspect-ratio: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3em;
+
+    * {
+        font-size: 2em;
+    }
+}
+
+.timer-clock-component>:last-child::before {
+    content: '';
+    border: 16px solid black;
+    background: transparent;
+    border-radius: 100vmax;
+    position: absolute;
+    inset: 0;
+    z-index: -10;
+}
+
+.timer-clock-component>:last-child>:nth-child(1) {
+    font-size: 2.5em;
+}
+
+.timer-clock-component>:last-child>:nth-child(2) {
+    font-size: 4em;
+}
+
+.timer-clock-component>:last-child>:nth-child(3) {
+    width: 1.5em;
+    aspect-ratio: 1;
+}
+
+.timer-clock-component>:last-child>:nth-child(3):hover {
+    cursor: pointer;
+}
